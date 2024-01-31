@@ -13,7 +13,7 @@ export default function CalendarScreen({ navigation }) {
     })
     return (
         <ImageBackground
-            source={require('../../assets/background.png')}
+            source={require('../../assets/app/background.png')}
             style={{ flex: 1, resizeMode: 'cover', justifyContent: 'center', alignItems: 'center' }}
         >
             <Text

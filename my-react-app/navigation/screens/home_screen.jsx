@@ -19,7 +19,7 @@ export default function HomeScreen({ navigation }) {
     return (
         <View style={{ flex: 1 }}>
             <ImageBackground
-                source={require('../../assets/background.png')}
+                source={require('../../assets/app/background.png')}
                 className="flex-1"
                 resizeMode="cover"
             >
