@@ -1,6 +1,7 @@
 import { useLayoutEffect } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, ImageBackground } from 'react-native';
 import {useNavigation} from "@react-navigation/native";
+
 
 export default function SearchScreen({ navigation }) {
     const navigation_setting = useNavigation()
@@ -11,10 +12,17 @@ export default function SearchScreen({ navigation }) {
         })
     })
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text
-                onPress={() => navigation.navigate('Home')}
-                style={{ fontSize: 26, fontWeight: 'bold' }}>Details Screen</Text>
-        </View>
+        <ImageBackground
+            source={require('../../assets/background.png')}
+            style={{ flex: 1, resizeMode: 'cover', justifyContent: 'center', alignItems: 'center' }}
+        >
+            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                <Text
+                    onPress={() => navigation.navigate('Home')}
+                    style={{ fontSize: 26, fontWeight: 'bold' }}>Search Screen</Text>
+            </View>
+        </ImageBackground>
     );
 }
+
+
