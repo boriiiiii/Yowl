@@ -1,12 +1,18 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, ImageBackground } from 'react-native';
 
 export default function CalendarScreen({ navigation }) {
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <ImageBackground
+            source={require('../../assets/background.png')}
+            style={{ flex: 1, resizeMode: 'cover', justifyContent: 'center', alignItems: 'center' }}
+        >
             <Text
                 onPress={() => navigation.navigate('Home')}
-                style={{ fontSize: 26, fontWeight: 'bold' }}>Calendar Screen</Text>
-        </View>
+                style={{ fontSize: 26, fontWeight: 'bold', color: 'white' }}
+            >
+                Calendar Screen
+            </Text>
+        </ImageBackground>
     );
 }
