@@ -30,19 +30,19 @@ function Navigation() {
                         let rn = route.name;
 
                         if (rn === homeName) {
-                            iconName = focused ? 'home' : 'flash-outline';
+                            iconName = 'flash-outline';
 
                         } else if (rn === searchName) {
-                            iconName = focused ? 'search' : 'search-outline';
+                            iconName = 'search-outline';
 
                         } else if (rn === addName) {
-                            iconName = focused ? 'add' : 'add-clear-outline';
+                            iconName = 'add-circle-outline';
                         }
                         else if (rn === calendarName) {
-                            iconName = focused ? 'calendar' : 'calendar-clear-outline';
+                            iconName = 'calendar-clear-outline';
                         }
                         else if (rn === profileName) {
-                            iconName = focused ? 'profile' : 'person-outline';
+                            iconName = 'person-outline';
                         }
 
                         return <Ionicons name={iconName} size={size} color={color} />;
