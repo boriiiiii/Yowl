@@ -1,8 +1,15 @@
-import * as React from 'react';
-import { View, Text, ImageBackground } from 'react-native';
-
+import { useLayoutEffect } from 'react';
+import { View, Text,ImageBackground } from 'react-native';
+import {useNavigation} from "@react-navigation/native";
 
 export default function ProfileScreen({ navigation }) {
+    const navigation_setting = useNavigation()
+
+    useLayoutEffect(() => {
+        navigation_setting.setOptions({
+            headerShown : false
+        })
+    })
     return (
         <ImageBackground
             source={require('../../assets/background.png')}
