@@ -1,7 +1,6 @@
-import { useLayoutEffect } from 'react';
-import { View, Text, ImageBackground } from 'react-native';
+import { View, Text, ImageBackground, Image, StyleSheet } from 'react-native';
+import {useLayoutEffect, useState} from 'react';
 import {useNavigation} from "@react-navigation/native";
-
 
 export default function AddScreen({ navigation }) {
     const navigation_setting = useNavigation()
@@ -16,6 +15,10 @@ export default function AddScreen({ navigation }) {
             source={require('../../assets/app/background.png')}
             style={{ flex: 1, resizeMode: 'cover', justifyContent: 'center', alignItems: 'center' }}
         >
+             <Image
+                source={require('../../assets/app/logo.png')}
+                style={styles.logo}
+            />
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                 <Text
                     onPress={() => navigation.navigate('Home')}
@@ -25,4 +28,12 @@ export default function AddScreen({ navigation }) {
     );
 }
 
-
+const styles = StyleSheet.create({
+    logo: {
+        width: '8%',  // Adjust the percentage according to your preference
+        height: '8%',  // Adjust the percentage according to your preference
+        position: 'absolute',
+        top: '6%',  // Adjust the percentage according to your preference
+        left: '10%',  // Adjust the percentage according to your preference
+    },
+});

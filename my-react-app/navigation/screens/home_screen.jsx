@@ -1,29 +1,37 @@
 import * as React from 'react';
-import {useLayoutEffect, useState} from 'react';
-import {ImageBackground, View, Image, ScrollView, Text} from 'react-native';
+import { useLayoutEffect, useState } from 'react';
+import { ImageBackground, View, Image, ScrollView,StyleSheet,Texte} from 'react-native';
 
 import Calendar from "../components/Calendar";
 import EventCard from "../components/Event_Card";
-import {useNavigation} from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
+
+
 
 export default function HomeScreen({ navigation }) {
     const [selectedDate, setSelectedDate] = useState(null);
 
-    const navigation_setting = useNavigation()
+    const navigation_setting = useNavigation();
 
     useLayoutEffect(() => {
         navigation_setting.setOptions({
-            headerShown : false
-        })
-    })
+            headerShown: false
+        });
+    });
+
     return (
         <View style={{ flex: 1 }}>
             <ImageBackground
                 source={require('../../assets/app/background.png')}
-                className="flex-1"
-                resizeMode="cover"
+                style={{ flex: 1, resizeMode: 'cover'}}
             >
-                <View style={{ marginTop:110 }}>
+                {/* Logo at the top-left corner */}
+                <Image
+                    source={require('../../assets/app/logo.png')}
+                    style={styles.logo}
+                />
+
+                <View style={{ marginTop: 110 }}>
                     <Calendar
                         className=""
                         onSelectDate={setSelectedDate}
@@ -31,6 +39,7 @@ export default function HomeScreen({ navigation }) {
                     />
                 </View>
 
+                
             <ScrollView>
                 <EventCard
                     organizerName="John Doe"
@@ -64,3 +73,13 @@ export default function HomeScreen({ navigation }) {
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    logo: {
+        width: '8%',  // Adjust the percentage according to your preference
+        height: '8%',  // Adjust the percentage according to your preference
+        position: 'absolute',
+        top: '6%',  // Adjust the percentage according to your preference
+        left: '10%',  // Adjust the percentage according to your preference
+    },
+});
