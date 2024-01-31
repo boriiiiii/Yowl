@@ -31,29 +31,22 @@ function Navigation() {
 
                         if (rn === homeName) {
                             iconName = 'flash-outline';
-
                         } else if (rn === searchName) {
                             iconName = 'search-outline';
-
                         } else if (rn === addName) {
                             iconName = 'add-circle-outline';
-                        }
-                        else if (rn === calendarName) {
+                        } else if (rn === calendarName) {
                             iconName = 'calendar-clear-outline';
-                        }
-                        else if (rn === profileName) {
+                        } else if (rn === profileName) {
                             iconName = 'person-outline';
                         }
 
                         return <Ionicons name={iconName} size={size} color={color} />;
                     },
-                })}
-                tabBarOptions={{
-                    activeTintColor: '#A58C4D',
-                    inactiveTintColor: 'grey',
-                    labelStyle: { paddingBottom: 10, fontSize: 10 },
-                    style: { padding: 10, height: 70}
-                }}>
+                    tabBarActiveTintColor: '#A58C4D',
+                    tabBarInactiveTintColor: 'grey',
+                    tabBarLabelStyle: { paddingBottom: 10, fontSize: 10 },
+                })}>
 
                 <Tab.Screen name={homeName} component={HomeScreen} />
                 <Tab.Screen name={searchName} component={SearchScreen} />
