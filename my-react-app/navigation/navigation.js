@@ -5,13 +5,17 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 // Screens
 import HomeScreen from './screens/home_screen';
-import DetailsScreen from './screens/details_screen';
-import SettingsScreen from './screens/settings_screen';
+import SearchScreen from "./screens/search_screen";
+import AddScreen from "./screens/add_screen";
+import CalendarScreen from "./screens/calendar_screen";
+import ProfileScreen from "./screens/profile_screen";
 
 //Screen names
 const homeName = "Home";
-const detailsName = "Details";
-const settingsName = "Settings";
+const searchName = "Search";
+const addName = "Add";
+const calendarName = "Calendar";
+const profileName = "Profile";
 
 const Tab = createBottomTabNavigator();
 
@@ -26,29 +30,36 @@ function Navigation() {
                         let rn = route.name;
 
                         if (rn === homeName) {
-                            iconName = focused ? 'home' : 'home-outline';
+                            iconName = focused ? 'home' : 'flash-outline';
 
-                        } else if (rn === detailsName) {
-                            iconName = focused ? 'list' : 'list-outline';
+                        } else if (rn === searchName) {
+                            iconName = focused ? 'search' : 'search-outline';
 
-                        } else if (rn === settingsName) {
-                            iconName = focused ? 'settings' : 'settings-outline';
+                        } else if (rn === addName) {
+                            iconName = focused ? 'add' : 'add-clear-outline';
+                        }
+                        else if (rn === calendarName) {
+                            iconName = focused ? 'calendar' : 'calendar-clear-outline';
+                        }
+                        else if (rn === profileName) {
+                            iconName = focused ? 'profile' : 'person-outline';
                         }
 
-                        // You can return any component that you like here!
                         return <Ionicons name={iconName} size={size} color={color} />;
                     },
                 })}
                 tabBarOptions={{
-                    activeTintColor: 'tomato',
+                    activeTintColor: '#A58C4D',
                     inactiveTintColor: 'grey',
                     labelStyle: { paddingBottom: 10, fontSize: 10 },
                     style: { padding: 10, height: 70}
                 }}>
 
                 <Tab.Screen name={homeName} component={HomeScreen} />
-                <Tab.Screen name={detailsName} component={DetailsScreen} />
-                <Tab.Screen name={settingsName} component={SettingsScreen} />
+                <Tab.Screen name={searchName} component={SearchScreen} />
+                <Tab.Screen name={addName} component={AddScreen} />
+                <Tab.Screen name={calendarName} component={CalendarScreen} />
+                <Tab.Screen name={profileName} component={ProfileScreen} />
 
             </Tab.Navigator>
         </NavigationContainer>

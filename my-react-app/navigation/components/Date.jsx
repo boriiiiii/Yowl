@@ -10,7 +10,7 @@ const Date = ({ date, onSelectDate, selected }) => {
     return (
         <TouchableOpacity
             onPress={() => onSelectDate(fullDate)}
-            className={`m-0.5 p-2 items-center h-18 w-16 rounded-md bg-transparent`} // Taille réduite
+            className={`m-0.5 items-center h-18 w-12 rounded-md bg-transparent`}
         >
             <Text className={`text-sm uppercase ${selected === fullDate ? 'font-bold' : 'font-normal'} text-white`}>
                 {day}
