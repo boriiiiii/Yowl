@@ -38,32 +38,31 @@ const EventCard = ({
 
   return (
     <View style={styles.cardContainer}>
+        <Text style={[styles.organizer2, { fontFamily: 'Michroma_400Regular', fontSize: 18}]}>{organizerName}</Text>
         <Image source={imageSource} style={styles.image} />
       <Text style={[styles.title, { fontFamily: 'Inter_700Bold' }]}>{title}</Text>
       <View style={styles.organizerContainer}>
-        <Text style={[styles.organizerLabel, { fontFamily: 'Inter_700Bold' }]}>
-          Organized by:
-        </Text>
         <Text style={[styles.organizer, { fontFamily: 'Michroma_400Regular' }]}>{organizerName}</Text>
       </View>
-      <Text style={styles.date}>Date: {date}</Text>
-      <Text style={styles.city}>City: {city}</Text>
+      <Text style={styles.date}>{date}</Text>
+      <Text style={styles.city}>{city}</Text>
       <View style={styles.themeContainer}>
         <Text style={[styles.themeLabel, { fontFamily: 'Inter_700Bold' }]}>Theme:</Text>
         <Text style={[styles.theme, { fontFamily: 'Inter_400Regular'}]}>{theme}</Text>
       </View>
       <View style={styles.seatsContainer}>
-        <Text style={[styles.seatsLabel, { fontFamily: 'Inter_700Bold' }]}>Seats available:</Text>
-        <Text style={styles.seats}>{seatsAvailable}</Text>
+        <Text style={[styles.seats, { fontFamily: 'Inter_700Bold' }]}>{seatsAvailable}</Text>
+        <Text style={[styles.seatsLabel, { fontFamily: 'Inter_400Regular' }]}> Seats</Text>
       </View>
     </View>
-  );
+  ); 
 };
 
 const styles = StyleSheet.create({
   cardContainer: {
     margin: 16,
     padding: 16,
+    paddingBottom: 80,
     border: "1px solid #ccc",
     borderRadius: 8,
     backgroundColor: "transparent",
@@ -73,6 +72,7 @@ const styles = StyleSheet.create({
     height: 160,
     width: "100%",
     borderRadius: 8,
+    marginTop: 20,
   },
   title: {
     fontSize: 24,
@@ -80,37 +80,53 @@ const styles = StyleSheet.create({
     marginTop: 8,
     textTransform: 'uppercase',
     color: "white",
+    position: "absolute",
+    top: 175,
+    left: 15,
+
   },
   organizerContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     marginTop: 4,
   },
-  organizerLabel: {
+  organizer: {
     fontSize: 11,
     color: "white",
-    marginRight: 4,
-    fontWeight: 'bold',
+    position: "absolute",
+    top: 10, 
   },
-  organizer: {
-    fontSize: 14,
+  organizer2: {
+    fontSize: 13,
     color: "white",
+    position: "absolute",
+    top: 8, 
+    left: 15,
   },
   date: {
     fontSize: 11,
     color: "white",
     fontFamily: 'Michroma_400Regular', 
     flex: 1,
+    position: "absolute",
+    top: 230,
+    left: 230,
   },
   city: {
-    fontSize: 11,
+    fontSize: 13,
     color: "white",
     fontFamily: 'Michroma_400Regular', 
     flex: 1,
+    position: "absolute",
+    top: 210,
+    left: 320,
   },
   themeContainer: {
     flexDirection: 'row',
     marginTop: 4,
+    position: "absolute",
+    top: 260,
+    left: 270,
   },
   themeLabel: {
     fontSize: 11,
@@ -127,6 +143,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginTop: 4,
+    position: "absolute",
+    top: 260,
+    left: 17,
   },
   seatsLabel: {
     fontSize: 11,
