@@ -35,29 +35,29 @@ export default function HomeScreen({ navigation }) {
                 <EventCard
                     organizerName="John Doe"
                     imagePath="cocktails"
-                    date="2024-01-30 18:00"
+                    date="12/01  18h"
                     title="Concert de Rock"
                     city="Paris"
-                    theme="Musique"
+                    theme="Music"
                     seatsAvailable="100"
                 />
                 <EventCard
-                    organizerName="John Doe"
+                    organizerName="Annana"
                     imagePath="clubbing"
-                    date="2024-01-30 18:00"
-                    title="Concert de Rock"
-                    city="Paris"
-                    theme="Musique"
-                    seatsAvailable="100"
+                    date="22/01    20h-6h"
+                    title="SOIREE DE FOU"
+                    city="Bordeaux"
+                    theme="Music"
+                    seatsAvailable="70"
                 />
                 <EventCard
                     organizerName="John Doe"
                     imagePath="antagonist"
-                    date="2024-01-30 18:00"
+                    date="13/02   19h"
                     title="Concert de Rock"
                     city="Paris"
-                    theme="Musique"
-                    seatsAvailable="100"
+                    theme="Dance"
+                    seatsAvailable="30"
                 />
             </ScrollView>
             </ImageBackground>
