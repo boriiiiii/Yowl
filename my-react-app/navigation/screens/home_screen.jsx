@@ -42,38 +42,34 @@ export default function HomeScreen({ navigation }) {
                         selected={selectedDate}
                     />
                 </View>
-
-                <ScrollView>
-                    {/* Event Cards */}
-                    <EventCard
-                        organizerName="John Doe"
-                        imagePath="cocktails"
-                        date="2024-01-30 18:00"
-                        title="Concert de Rock"
-                        city="Paris"
-                        theme="Musique"
-                        seatsAvailable="100"
-                    />
-                    <EventCard
-                        organizerName="John Doe"
-                        imagePath="clubbing"
-                        date="2024-01-30 18:00"
-                        title="Concert de Rock"
-                        city="Paris"
-                        theme="Musique"
-                        seatsAvailable="100"
-                    />
-                    <EventCard
-                        organizerName="John Doe"
-                        imagePath="antagonist"
-                        date="2024-01-30 18:00"
-                        title="Concert de Rock"
-                        city="Paris"
-                        theme="Musique"
-                        seatsAvailable="100"
-                    />
-                    {/* Add more EventCard components as needed */}
-                </ScrollView>
+            <ScrollView>
+                <EventCard
+                    organizerName="John Doe"
+                    imagePath="cocktails"
+                    date="12/01  18h"
+                    title="Concert de Rock"
+                    city="Paris"
+                    theme="Music"
+                    seatsAvailable="100"
+                />
+                <EventCard
+                    organizerName="Annana"
+                    imagePath="clubbing"
+                    date="22/01    20h-6h"
+                    title="SOIREE DE FOU"
+                    city="Bordeaux"
+                    theme="Music"
+                    seatsAvailable="70"
+                />
+                <EventCard
+                    organizerName="John Doe"
+                    imagePath="antagonist"
+                    date="13/02   19h"
+                    title="Concert de Rock"
+                    city="Paris"
+                    theme="Dance"
+                    seatsAvailable="30"
+                />
             </ImageBackground>
         </View>
     );

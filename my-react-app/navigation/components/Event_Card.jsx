@@ -38,7 +38,7 @@ const EventCard = ({
 
   return (
     <View style={styles.cardContainer}>
-        <Text style={[styles.organizer2, { fontFamily: 'Michroma_400Regular', fontSize: 18}]}>{organizerName}</Text>
+        <Text style={[styles.organizer2, { fontFamily: 'Michroma_400Regular'}]}>{organizerName}</Text>
         <Image source={imageSource} style={styles.image} />
       <Text style={[styles.title, { fontFamily: 'Inter_700Bold' }]}>{title}</Text>
       <View style={styles.organizerContainer}>
@@ -46,10 +46,7 @@ const EventCard = ({
       </View>
       <Text style={styles.date}>{date}</Text>
       <Text style={styles.city}>{city}</Text>
-      <View style={styles.themeContainer}>
-        <Text style={[styles.themeLabel, { fontFamily: 'Inter_700Bold' }]}>Theme:</Text>
-        <Text style={[styles.theme, { fontFamily: 'Inter_400Regular'}]}>{theme}</Text>
-      </View>
+        <Text style={[styles.theme, { fontFamily: 'Inter_700Bold'}]}>{theme}</Text>
       <View style={styles.seatsContainer}>
         <Text style={[styles.seats, { fontFamily: 'Inter_700Bold' }]}>{seatsAvailable}</Text>
         <Text style={[styles.seatsLabel, { fontFamily: 'Inter_400Regular' }]}> Seats</Text>
@@ -62,7 +59,7 @@ const styles = StyleSheet.create({
   cardContainer: {
     margin: 16,
     padding: 16,
-    paddingBottom: 80,
+    paddingBottom: 40,
     border: "1px solid #ccc",
     borderRadius: 8,
     backgroundColor: "transparent",
@@ -97,47 +94,39 @@ const styles = StyleSheet.create({
     top: 10, 
   },
   organizer2: {
-    fontSize: 13,
+    fontSize: 15,
     color: "white",
     position: "absolute",
-    top: 8, 
-    left: 15,
+    top: 13, 
+    left: 20,
   },
   date: {
     fontSize: 11,
     color: "white",
     fontFamily: 'Michroma_400Regular', 
     flex: 1,
-    position: "absolute",
-    top: 230,
-    left: 230,
+    textAlign: "right",
+    top: 35,
+  },
+  time: {
+    fontSize: 11,
+    color: "white",
+    fontFamily: 'Michroma_400Regular', 
+    flex: 1,
+    textAlign: "right",
   },
   city: {
     fontSize: 13,
     color: "white",
     fontFamily: 'Michroma_400Regular', 
-    flex: 1,
-    position: "absolute",
-    top: 210,
-    left: 320,
-  },
-  themeContainer: {
-    flexDirection: 'row',
-    marginTop: 4,
-    position: "absolute",
-    top: 260,
-    left: 270,
-  },
-  themeLabel: {
-    fontSize: 11,
-    color: "white",
-    marginRight: 4,
-    fontWeight: 'bold',
+    textAlign: "right",
   },
   theme: {
     fontSize: 11,
     color: "white",
     textTransform: 'uppercase',
+    textAlign: "right",
+    top: 30,
   },
   seatsContainer: {
     flexDirection: 'row',
