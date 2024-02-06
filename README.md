@@ -18,13 +18,13 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants sur v
 2. Accédez au répertoire du projet :
 
    ```bash
-   cd Yowl
+   cd my-react-app
    ```
 
 3. Installez les dépendances :
 
    ```bash
-   npm install i
+   npm i
    ```
 
 ## Configuration
@@ -47,3 +47,5 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants sur v
 
 Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue pour discuter des fonctionnalités que vous aimeriez ajouter ou signaler des bugs.
 
+Si vous avez me moindre problème contacté nous sur Discord : - ozeph
+                                                             - boriiiiiiiii
