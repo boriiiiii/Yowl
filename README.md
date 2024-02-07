@@ -1,5 +1,5 @@
 
-```markdown
+
 # Yowl
 
 Avant de commencer, assurez-vous d'avoir installé les éléments suivants sur votre machine :
